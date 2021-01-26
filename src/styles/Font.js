@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { Link } from 'react-scroll'
 
 export const H1 = styled.h1`
   font-size: 4.5rem;
