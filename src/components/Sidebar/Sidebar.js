@@ -2,7 +2,6 @@ import React from 'react'
 import {
   CenterWrapper,
   Container,
-  FlexRow,
   SidebarContainer,
 } from '../../styles/Container'
 import { ListItem, ListLink, ListWrapper } from '../../styles/List'

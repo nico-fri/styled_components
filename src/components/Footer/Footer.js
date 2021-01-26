@@ -9,7 +9,7 @@ import {
 import { H2, Linkr, Text } from '../../styles/Font'
 import { ListItem, ListWrapper, ListLink } from '../../styles/List'
 import { links } from '../../data/links'
-import Logo from '../../assets/truststar.svg'
+import Logo from '../../assets/reviews.svg'
 import { IconImage } from '../../styles/Image'
 
 function Footer() {
