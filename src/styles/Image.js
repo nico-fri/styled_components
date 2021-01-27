@@ -18,6 +18,9 @@ export const HeroImage = styled(Image)`
 export const FeatureImage = styled(Image)`
   margin: 20px 0;
   width: 90%;
+  @media (max-width: 992px) {
+    width: 100%;
+  }
 `
 
 export const ShapeImage = styled(Image)`

@@ -125,6 +125,7 @@ export const SecondFeature = styled(RightContainer)`
 
   @media (max-width: 992px) {
     order: 1;
+    padding: 0;
   }
 `
 
