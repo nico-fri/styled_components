@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const Container = styled.div`
   margin-right: auto;
@@ -25,22 +25,12 @@ export const Container = styled.div`
   }
 `
 
-export const HeroContainer = styled.div`
-  position: relative;
-  background: ${(props) => props.theme.background.secondary};
-`
-
-export const SidebarContainer = styled.div`
-  padding: 50px;
-  transition: all 1s ease-in;
-  background: ${(props) => props.theme.background.secondary};
-  @media (min-width: 992px) {
-    display: none;
-  }
-`
-
 export const LeftContainer = styled.div`
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   @media (max-width: 992px) {
     width: 100%;
   }
@@ -49,6 +39,9 @@ export const LeftContainer = styled.div`
 export const RightContainer = styled.div`
   width: 50%;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 992px) {
     width: 100%;
   }
@@ -60,78 +53,4 @@ export const LeftRightWrapper = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-`
-
-export const FlexRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`
-
-export const FlexStartRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-`
-
-export const Wrapper = styled.div``
-
-export const CenterWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-export const FooterContainer = styled.div`
-  padding: 50px 0;
-  background: ${(props) => props.theme.background.footer};
-`
-
-export const FeatureContainer = styled.div`
-  padding: 100px 0;
-`
-
-export const MaxContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-export const FirstFeature = styled(LeftContainer)`
-  display: flex;
-  ${(props) =>
-    props.reverse &&
-    css`
-      order: 2;
-    `}
-
-  @media (max-width: 992px) {
-    order: 2;
-  }
-`
-
-export const SecondFeature = styled(RightContainer)`
-  padding: 0 50px;
-  ${(props) =>
-    props.reverse &&
-    css`
-      order: 1;
-    `}
-
-  @media (max-width: 992px) {
-    order: 1;
-    padding: 0;
-  }
-`
-
-export const Divider = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme.colors.light_grey};
-  height: 1px;
-  width: 200px;
-  margin: 20px;
 `

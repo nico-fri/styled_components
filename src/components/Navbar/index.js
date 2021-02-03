@@ -1,17 +1,24 @@
 import React, { useState } from 'react'
-import { Container, FlexRow } from '../../styles/Container'
-import { H3 } from '../../styles/Font'
-import { ListItem, ListWrapper, ListLink } from '../../styles/List'
-import { Nav, NavContainer, NavLinks, NavMenu } from '../../styles/Navbar'
+import { Container } from '../../styles/Container'
+import {
+  Nav,
+  NavContainer,
+  NavLinks,
+  NavMenu,
+  ListItem,
+  ListWrapper,
+  ListLink,
+  Logo,
+  Button,
+  LogoImage,
+} from './styles/Navbar'
 import { links } from '../../data/links'
-import { Button } from '../../styles/Button'
-import { IconImage } from '../../styles/Image'
-import Logo from '../../assets/reviews.svg'
+import LogoImg from '../../assets/reviews.svg'
 import { HiOutlineMenuAlt4 } from 'react-icons/hi'
 import { VscClose } from 'react-icons/vsc'
 import { IconContext } from 'react-icons/lib'
 import { useHistory } from 'react-router-dom'
-import Sidebar from '../Sidebar/Sidebar'
+import { Sidebar } from '../../components'
 
 function Navbar() {
   const [isVisible, setIsVisible] = useState(false)
@@ -22,10 +29,10 @@ function Navbar() {
       <Nav>
         <Container>
           <NavContainer>
-            <FlexRow>
-              <IconImage src={Logo} />
-              <H3>Reviews</H3>
-            </FlexRow>
+            <Logo>
+              <LogoImage src={LogoImg} />
+              Reviews
+            </Logo>
             <NavLinks>
               <ListWrapper>
                 {links.map((item, index) => (
